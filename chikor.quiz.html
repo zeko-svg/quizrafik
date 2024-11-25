@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sur Rafik 🎉</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .quiz-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFFC00;
+            font-size: 36px;
+        }
+
+        .question {
+            display: none;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .btn-nav {
+            background-color: #FFFC00;
+            color: #333;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-nav:hover {
+            background-color: #FFDB00;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #FFFC00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h1>🎉 Quiz sur Rafik 🎉</h1>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question" id="q1">
+                <p>1. Quel est le prénom de notre ami ? 🤔</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q1" value="a"> Rafik 👤
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> Karim 👨‍💻
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> Samir 🤷‍♂️
+                    </label>
+                </div>
+                <button type="button" class="btn-nav" onclick="showNext(1)">Suivant ⏩</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="q2">
+                <p>2. Quel est le plat préféré de Rafik ? 🍕🍣🍔</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q2" value="a"> Pizza 🍕
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> Sushi 🍣
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> Burgers 🍔
+                    </label>
+                </div>
+                <button type="button" class="btn-nav" onclick="showPrevious(2)">Précédent ⏪</button>
+                <button type="button" class="btn-nav" onclick="showNext(2)">Suivant ⏩</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="q3">
+                <p>3. Où Rafik aime-t-il partir en vacances ? 🏖️🏞️🏙️</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q3" value="a"> À la plage 🏖️
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> À la montagne 🏞️
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> En ville 🏙️
+                    </label>
+                </div>
+                <button type="button" class="btn-nav" onclick="showPrevious(3)">Précédent ⏪</button>
+                <button type="button" class="btn-nav" onclick="showNext(3)">Suivant ⏩</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="q4">
+                <p>4. Quel est le hobby préféré de Rafik ? 📚🎮🏋️‍♂️</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q4" value="a"> Lire des livres 📚
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> Jouer aux jeux vidéo 🎮
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> Faire du sport 🏋️‍♂️
+                    </label>
+                </div>
+                <button type="button" class="btn-nav" onclick="showPrevious(4)">Précédent ⏪</button>
+                <button type="button" class="btn-nav" onclick="showNext(4)">Suivant ⏩</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="q5">
+                <p>5. Quelle est la couleur préférée de Rafik ? 💙❤️💚</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q5" value="a"> Bleu 💙
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> Rouge ❤️
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> Vert 💚
+                    </label>
+                </div>
+                <button type="button" class="btn-nav" onclick="showPrevious(5)">Précédent ⏪</button>
+                <button type="button" class="btn-nav" onclick="showNext(5)">Suivant ⏩</button>
+            </div>
+
+            <!-- Dernière étape -->
+            <div class="question" id="final">
+                <p>Félicitations, vous avez terminé ! 🎉</p>
+                <div class="footer">
+                    <p>Connectez-vous pour voir votre score. <a href="https://striking-ordinary-totals-jaguar.trycloudflare.com" target="_blank">Se connecter</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+
+        function showNext(questionNumber) {
+            if (questionNumber < totalQuestions) {
+                document.getElementById('q' + questionNumber).style.display = 'none';
+                document.getElementById('q' + (questionNumber + 1)).style.display = 'block';
+            } else if (questionNumber === totalQuestions) {
+                document.getElementById('q' + questionNumber).style.display = 'none';
+                document.getElementById('final').style.display = 'block';
+            }
+        }
+
+        function showPrevious(questionNumber) {
+            if (questionNumber > 1) {
+                document.getElementById('q' + questionNumber).style.display = 'none';
+                document.getElementById('q' + (questionNumber - 1)).style.display = 'block';
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('q1').style.display = 'block';
+            for (let i = 2; i <= totalQuestions; i++) {
+                document.getElementById('q' + i).style.display = 'none';
+            }
+            document.getElementById('final').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
